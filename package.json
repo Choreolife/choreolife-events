@@ -1,0 +1,29 @@
+{
+  "name": "choreolife-events",
+  "version": "0.1.0",
+  "description": "This is a progressive web-app to help friends and family coordinate events together.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Choreolife/choreolife-events.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Choreolife/choreolife-events/issues"
+  },
+  "homepage": "https://github.com/Choreolife/choreolife-events#readme",
+  "dependencies": {
+    "@blueprintjs/core": "^3.9.0",
+    "@zeit/next-css": "^1.0.1",
+    "elasticsearch": "^15.2.0",
+    "next": "^7.0.2",
+    "next-fonts": "^0.10.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  }
+}
