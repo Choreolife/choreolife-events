@@ -1,8 +1,8 @@
-import React from 'react'
-import App, { Container } from 'next/app'
-import Link from 'next/link';
+import React from 'react';
+import App, { Container } from 'next/app';
 
-import { Button, Navbar, Alignment } from "@blueprintjs/core";
+// import { Button, Navbar, Alignment } from "@blueprintjs/core";
+import Navbar from '../components/Navbar';
 
 import 'normalize.css/normalize.css';
 import '@blueprintjs/icons/lib/css/blueprint-icons.css';
@@ -18,22 +18,16 @@ export default class MyApp extends App {
 
     return { pageProps }
   }
+  
 
   render () {
-    const { Component, pageProps } = this.props
+    const { Component, pageProps } = this.props;
 
     return (
       <Container>
-        <Navbar>
-            <Navbar.Group align={Alignment.LEFT}>
-                <Navbar.Heading>Choreolife</Navbar.Heading>
-                <Navbar.Divider />
-                <Link href="/"><Button className="bp3-minimal" icon="home" text="Home" /></Link>
-                <Link href="/about"><Button className="bp3-minimal" icon="info-sign" text="About" /></Link>
-            </Navbar.Group>
-        </Navbar>  
+        <Navbar account={true}></Navbar>
         <Component {...pageProps} />
       </Container>
-    )
+    );
   }
 }
