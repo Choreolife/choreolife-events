@@ -17,7 +17,7 @@ export default class Event extends Component {
 
     return (
       <div>
-        <Card className={classes.card}>
+        <Card>
           <CardContent>
             <div style={growable}>
               <Typography color="textSecondary" gutterTop>
