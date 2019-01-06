@@ -9,9 +9,8 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogActions from '@material-ui/core/DialogActions';
 import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import Event from '../components/Event';
 import { withStyles } from '@material-ui/core/styles';
+import Events from '../components/Events';
 
 import Link from 'next/link';
 
@@ -28,7 +27,7 @@ const styles = theme => ({
   button: {
     margin: theme.spacing.unit * 3,
     marginLeft: 0,
-  },  
+  },
 });
 
 class Index extends React.Component {
@@ -40,23 +39,7 @@ class Index extends React.Component {
         <Typography variant="h1" gutterBottom className={classes.headline}>
           Happening Soon
         </Typography>
-	      <Grid container spacing={24}>
-	        <Grid item xs={4}>
-	          <Event />
-	        </Grid>
-	        <Grid item xs={4}>
-	          <Event />
-	        </Grid>
-	        <Grid item xs={4}>
-	          <Event />
-	        </Grid>
-	        <Grid item xs={4}>
-	          <Event />
-	        </Grid>
-	        <Grid item xs={4}>
-	          <Event />
-	        </Grid>
-	      </Grid>
+        <Events className={classes.events}/>
         <Link href="/about">
 		      <Button variant="contained" color="primary" className={classes.button}>
 		        Create an Event
