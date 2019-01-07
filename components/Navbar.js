@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
+
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -33,6 +35,10 @@ const styles = theme => ({
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
+  },
+  titleAnchor: {
+    color: 'white',
+    textDecoration: 'none',
   },
   search: {
     position: 'relative',
@@ -166,9 +172,13 @@ class PrimarySearchAppBar extends React.Component {
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar>
-            <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-              Choreolife
-            </Typography>
+            <Link href="/">
+              <a className={classes.titleAnchor}>
+                <Typography className={classes.title} variant="h6" color="inherit" noWrap>
+                  Choreolife
+                </Typography>
+              </a>
+            </Link>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
                 <SearchIcon />

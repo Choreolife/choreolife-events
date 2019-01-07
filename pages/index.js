@@ -2,6 +2,8 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
+
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
@@ -10,9 +12,8 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogActions from '@material-ui/core/DialogActions';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
-import Events from '../components/Events';
 
-import Link from 'next/link';
+import Events from '../components/Events';
 
 const styles = theme => ({
   root: {
@@ -40,7 +41,7 @@ class Index extends React.Component {
           Happening Soon
         </Typography>
         <Events className={classes.events}/>
-        <Link href="/about">
+        <Link href="/new-event">
 		      <Button variant="contained" color="primary" className={classes.button}>
 		        Create an Event
 		      </Button>
